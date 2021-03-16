@@ -1,0 +1,22 @@
+# Use Python3 standard environment
+runtime: python37
+env: standard
+
+# Run gunicorn on app object in app.py
+entrypoint: gunicorn -b :$PORT app:app
+
+# Spin up 2 instances
+manual_scaling:
+  instances: 1
+
+env_variable:
+  PLACES_API_KEY: AIzaSyCcfAQ_xEMsXan3smI-9nKFPlrf0w-22jQ
+  NUTRITIONIX_API_ID: f4b96ad8
+  NUTRITIONIX_API_KEY: d8302bf01cca636158975ca04e736909
+  RECIPE_API_KEY: 3dff0b788fmshf42c50e6e31e683p1014f2jsn1f4a4f85d162
+
+# Use an f1-micro machine type
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10

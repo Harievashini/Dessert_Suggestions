@@ -1,0 +1,32 @@
+<html>
+{% extends "layout.html" %}
+{% block content %}
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+    <body style="background-color:#f5e4dc;">
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <!-- Form to record dessert information -->
+	    <form action="{{ url_for('suggest') }}" method=post>
+		    <p class="heading" style="margin-left:500px;color:#4e0628;font-weight:500;letter-spacing:0.3px;">Shop Name :
+		    <br>
+		    <input type=text name=ShopName>
+		<p class="heading" style="margin-left:500px;color:#4e0628;font-weight:500;letter-spacing:0.3px;">Dessert Recommendation :
+		<br>
+		<textarea rows=5 cols=50 name=Recommendation></textarea></p>
+		<p class="heading" style="margin-left:500px;color:#4e0628;font-weight:500;letter-spacing:0.3px;">Reviews : 
+		<br>
+		<textarea rows=5 cols=50 name=Reviews></textarea></p>
+		<br>
+		<p><button type="submit" class="btn btn-primary" value="Enter" style="background-color:#4e0628;color:#ddd3c9;font-weight:500;margin-left:500px;border-color:#ddd3c9;">Enter</button></p>
+		<!-- Displays the error status if the dessert details are not entered inside the datastore -->
+		<p style="margin-left:500px;color:#4e0628;font-weight:500;letter-spacing:0.3px;">Status :{{reply}}</p>
+	    </form>
+	
+	</body>
+{% endblock %}
+</html>

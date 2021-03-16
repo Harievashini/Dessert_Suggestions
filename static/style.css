@@ -1,0 +1,36 @@
+.navbar-custom {
+    background-color: #4e0628;
+}
+
+.site-topic {
+	color: #ddd3c9;
+	font-weight: 600;
+	letter-spacing: 0.9px;
+}
+
+.site-topic:hover {
+	color: #ffffff;
+	font-weight: 600;
+	letter-spacing: 0.9px;
+}
+
+.page-topic {
+	margin-left: 3px;
+	color: #ddd3c9;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	
+}
+
+.page-topic:hover {
+	color: #ffffff;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	
+}
+
+.page-topic-bold {
+	color: #ffffff;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}

@@ -1,0 +1,54 @@
+<html>
+{% extends "layout.html" %}
+{% block content %}
+<head>
+<style>
+	td{
+		font-size:10px;
+	}
+	th{
+		font-size:13px;
+		text-align:left;
+	}
+</style>
+</head>
+<body style="background-color:#f5e4dc;">
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- Displays table containing all the dessert suggestions -->
+	<table style="margin-left:25px;margin-right:25px;">
+		<tr style="background-color:#4e0628;color:#ddd3c9;">
+			
+			<th >Shop Name</th>
+			<th >Address</th>
+			<th >Recommendation</th>
+			<th >Nutrition</th>
+			<th >Reviews</th>
+			<th >Rating</th>
+			<th >Website</th>
+			<th >Phonenumber</th>
+			
+		</tr>
+		<br>
+		
+	
+		{% for entry in entries %}
+			<tr style="color:#4e0628;">
+
+				<td >{{ entry.ShopName }}</td>
+				<td >{{ entry.Address }}</td>
+			    	<td >{{ entry.Recommendation }}</td>
+			    	<td >{{ entry.Nutrition }}</td>
+			    	<td >{{ entry.Reviews }}</td>
+			    	<td >{{ entry.Rating }}</td>
+				<td >{{ entry.Website }}</td>
+				<td >{{ entry.Phonenumber }}</td>
+			    	    	
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+{% endblock %}
+</html>
